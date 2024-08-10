@@ -3,7 +3,7 @@ import Navbar from '../components/navbar';
 import AbstractShapes from '../components/shape';
 import Marq from '../components/marquee';
 import Card from '../components/card';
-
+import forensik from '../assets/forensik.jpg';
 import mySelf from '../assets/IMG_8424.jpeg';
 import photo_2 from '../assets/IMG_8936.jpeg';
 import pelem from '../assets/pelem.jpg';
@@ -137,27 +137,29 @@ const LandingPage = () => {
                 <br />
                 <Marq icons={icons3} />
             </div>
-            <br />
-            <div ref={projectsRef} className='w-full min-h-fit flex flex-col items-center text-center px-5'>
+            <br className=''/>
+            
+            <div ref={projectsRef} className='w-full min-h-fit flex flex-col items-center text-center px-5 pt-10'>
                 <h1 className='text-2xl text-fifth font-bold'>All My Project i've Done</h1>
                 <br />
                 <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
                     <Card title={"Website Padukuhan Pelem"} 
                         img={pelem} 
                         src={'https://github.com/padukuhanPelem/website_pelem.git'}
-                        text='This Statis Website i make for My Project at KKN'
+                        text="The static website I've made for my KKN project"
                         
                     />
                     
                     <Card title={"Atma Kitchen"} 
                         img={bakery} 
                         src={'https://github.com/padukuhanPelem/website_pelem.git'}
-                        text='This Website i Make For My Subject at Collage'
+                        text="The static website I've made for my college project"
                         
                     />
-                    <Card title={"Coming Soon"} 
-                        img="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
-                        text='Coming Soon Coming Soon Coming Soon Coming Soon Coming Soon'
+                    <Card title={"Wrote a Book(Assisting)"} 
+                        img={forensik}
+                        src={"https://github.com/williamjvnt/portofolio.git"}
+                        text='The Book that I wrote as a Assistent Lecture.'
                         
                     />
                     <Card title={"Coming Soon"} 
