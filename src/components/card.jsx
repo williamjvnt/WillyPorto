@@ -1,19 +1,21 @@
 import React from 'react';
-import { TERipple } from 'tw-elements-react';
-
+import { motion } from 'framer-motion';
 function Card ({src,text,img,title}) {
     return (
-        <div className="block rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-fourth w-[20rem] h-fit">
-            <TERipple>
-            <div
+        <motion.div 
+            whileHover={{ scale: [null, 1.05, 1.05] }}
+            transition={{ duration: 0.3 }} 
+            className="block rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-fourth w-[20rem] h-fit">
+            <div 
+                
                 className="relative overflow-hidden bg-cover bg-no-repeat">
                 <img
+                
                     className="rounded-t-lg w-[20rem] h-[18rem] object-cover" 
                     src={img}
                     alt=""
                 />
             </div>
-            </TERipple>
             <div className="p-6 bg-fourth rounded-lg">
                 <h5
                     className="mb-2 text-xl font-medium leading-tight text-secondary dark:text-secondary">
@@ -32,7 +34,7 @@ function Card ({src,text,img,title}) {
                 </a>
                 
             </div>
-        </div>
+        </motion.div>
     );
 }
 
