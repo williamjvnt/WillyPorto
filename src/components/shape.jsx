@@ -13,7 +13,7 @@ function AbstractShapes({src}) {
             transition={{
                 type: "spring",
                 duration: 1,
-                delay: 0.5
+                delay: 0.3
             }}
         className="relative flex justify-center items-center">
             {src}

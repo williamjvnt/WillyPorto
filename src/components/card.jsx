@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useInView } from "framer-motion";
+
 function Card ({src,text,img,title}) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
     return (
-        <motion.div 
+        <motion.div ref={ref}
             whileHover={{ scale: [null, 1.05, 1.05] }}
-            transition={{ duration: 0.3 }} 
+            transition={{ duration: 0.3, delay: 0.2, ease: [0.6, 0.01, -0.05, 0.9] }} 
+            initial={{ scale: 0 }}
+            animate={isInView ? { scale: 1 } : {}}
             className="block rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-fourth w-[20rem] h-fit">
             <div 
                 

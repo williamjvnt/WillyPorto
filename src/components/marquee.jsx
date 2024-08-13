@@ -1,8 +1,11 @@
 import React from 'react';
 import Marquee from "react-fast-marquee";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from 'framer-motion';
+import { useInView } from "framer-motion";
 
 function Marq({ icons,src}) {
+    
     return (
         <Marquee pauseOnHover pauseOnClick direction={src} >
            {Array.from({ length: 2 }).map((_, index) => (

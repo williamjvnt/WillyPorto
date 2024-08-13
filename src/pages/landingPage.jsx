@@ -13,6 +13,7 @@ import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-
 import { faHtml5, faBootstrap, faCss3, faLaravel, faJs, faReact, faPython, faPhp } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { useInView } from "framer-motion";
+
 const icons = [
     { name: 'HTML5', icon: faHtml5 },
     { name: 'Bootstrap', icon: faBootstrap },
@@ -42,17 +43,27 @@ const LandingPage = () => {
     const introRef = useRef(null);
     const aboutRef = useRef(null);
     const skillsRef = useRef(null);
+    const skillsMobileRef = useRef(null);
     const projectsRef = useRef(null);
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
-    const aboutIsInView = useInView(aboutRef, { once: true });
+
+    const refAbout = useRef(null);
+    const isInAbout = useInView(refAbout, { once: true });
+
+    const refAboutMobile = useRef(null);
+    const isInAboutMobile = useInView(refAboutMobile, { once: true });
+    const scrollToSection = (ref) => {
+        ref.current?.scrollIntoView({ behavior: 'smooth' });
+    };
     return (
         <div className='relative w-full min-h-screen bg-third'>
             <Navbar scrollToSection={{
                 intro: () => scrollToSection(introRef),
                 about: () => scrollToSection(aboutRef),
                 skills: () => scrollToSection(skillsRef),
+                skillsMobile: () => scrollToSection(skillsMobileRef),
                 projects: () => scrollToSection(projectsRef),
             }} />
             
@@ -68,6 +79,7 @@ const LandingPage = () => {
                             </clipPath>
                         </defs>
                         <motion.image
+
                             href={mySelf}
                             x="30" 
                             y="5"
@@ -75,24 +87,18 @@ const LandingPage = () => {
                             height="180"
                             clipPath="url(#blobclip)"
                             preserveAspectRatio="xMidYMid slice"
-                            initial={{ scale: 0 }}
-                            animate={{  scale: 1 }}
-                            transition={{
-                                type: "spring",
-                                duration: 1,
-                                delay: 0.5
-                            }}
+                            
                         />
                     </svg>
                 }/>
                 <div className='flex flex-col items-center text-center align-middle relative md:left-[-50px] md:bottom-[-65px] xl:left-[0px]'>
                     <motion.h1 ref={ref} className='text-3xl text-fourth font-bold relative bottom-[4rem] xl:text-6xl' 
-                        initial={{ opacity: -10, y: -150 }} 
-                        animate={{ opacity:isInView ? 1 : -10 ,y: isInView ? 0 : -150, }} 
+                        initial={{ opacity: -10, y: -50 }} 
+                        animate={{ opacity:isInView ? 1 : -10 ,y: isInView ? 0 : -50, }} 
                         transition={{ ease: "easeOut", duration: 0.2, }} >
                             Hi, i am <span className='text-primary'>William</span>
                         </motion.h1>
-                    <motion.h1 ref={ref} className='text-3xl text-fourth font-bold relative bottom-[4rem] xl:text-6xl'initial={{ opacity: -10, y: -150 }} animate={{ opacity:isInView ? 1 : -10 ,y: isInView ? 0 : -150,}} transition={{ ease: "easeOut", duration: 0.2,  }}>Cyber Security Enthusiast</motion.h1>
+                    <motion.h1 ref={ref} className='text-3xl text-fourth font-bold relative bottom-[4rem] xl:text-6xl'initial={{ opacity: -10, y: -50 }} animate={{ opacity:isInView ? 1 : -10 ,y: isInView ? 0 : -50,}} transition={{ ease: "easeOut", duration: 0.2,  }}>Cyber Security Enthusiast</motion.h1>
                     <motion.div className='col-span-3 relative bottom-[2rem] ' initial={{ opacity: -10, y: 100 }} animate={{opacity:isInView ? 1 : -10 ,y: isInView ? 0 : 100,}} transition={{ ease: "easeOut", duration: 0.5 }}>
                         <a href="https://www.linkedin.com/in/william-juvent-617509231/" className='text-4xl mx-4 xl:text-5xl' ><FontAwesomeIcon className='hover:text-fifth' icon={faLinkedin} /></a>
                         <a href="https://github.com/williamjvnt" className='text-4xl mx-4 xl:text-5xl'><FontAwesomeIcon className='hover:text-fifth' icon={faGithub}/></a>
@@ -102,14 +108,15 @@ const LandingPage = () => {
             </div>
 
             <div ref={aboutRef} className='w-full min-h-fit flex flex-col items-center text-center px-5 md:flex-row'>
-                <div className='flex-col items-center hidden relative md:flex md:right-[-40px] md:bottom-[-15px]'>
-                    <h1 className='text-2xl text-gray-800 font-bold xl:text-3xl'>Hi, my name is William Juvent</h1>
-                    <i className='text-gray-600 font-semibold mt-4 xl:text-2xl'>
+                <div  className='flex-col items-center hidden relative md:flex md:right-[-40px] md:bottom-[-15px]'>
+                    <motion.h1 ref={refAbout} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAbout ? 1 : 0 ,x: isInAbout ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2 }} className='text-2xl text-gray-800 font-bold xl:text-3xl'>Hi, my name is William Juvent</motion.h1>
+                    <motion.i ref={refAbout} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAbout ? 1 : 0 ,x: isInAbout ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2, delay: 0.5 }} className='text-gray-600 font-semibold mt-4 xl:text-2xl'>
                        I really love drinking coffee and have a deep passion for technology. Currently, I am on a journey to learn about web and mobile development, but my biggest interest in technology is cybersecurity. I am dedicated to understanding the intricacies of protecting digital information and hope to contribute to the advancement of the technology world.
-                    </i>
+                    </motion.i>
                 </div>
                 <AbstractShapes src={
                     <svg 
+                        
                         className=' md:h-[30rem] md:w-[30rem] md:ml-[-20px] xl:h-[60rem] xl:w-[60rem] xl:mr-[-20px]'
                         width={500} height={500} 
                         viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -119,16 +126,7 @@ const LandingPage = () => {
                             </clipPath>
                         </defs>
                         <motion.image
-                            initial={{ scale: 0 }}
-                            animate={{  scale: 1 }}
-                            viewport={{ once: true, amount: 1.0}}
-                            
-                            transition={{
-                                type: "spring",
-                                duration: 1,
-                                delay: 0.5
-                            }}
-                            
+
                             href={photo_2}
                             x="2" 
                             y="-5"
@@ -139,12 +137,13 @@ const LandingPage = () => {
                         />
                     </svg>
                 }/>
-                <motion.h1 className='text-2xl text-fourth font-bold relative bottom-[4rem] md:hidden'>Hi My Name is William Juvent</motion.h1>
+                <motion.h1 
+                ref={refAboutMobile} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAboutMobile ? 1 : 0 ,x: isInAboutMobile ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2}} className='text-2xl text-fourth font-bold relative bottom-[4rem] md:hidden'>Hi My Name is William Juvent</motion.h1>
                 <br />
-                <motion.p  className=' text-fourth font-semi-bold relative bottom-[5rem] md:hidden'>I really love drinking coffee and have a deep passion for technology. Currently, I am on a journey to learn about web and mobile development, but my biggest interest in technology is cybersecurity. I am dedicated to understanding the intricacies of protecting digital information and hope to contribute to the advancement of the technology world.</motion.p>
+                <motion.p ref={refAboutMobile} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAboutMobile ? 1 : 0 ,x: isInAboutMobile ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2, delay: 0.5 }} className=' text-fourth font-semi-bold relative bottom-[5rem] md:hidden'>I really love drinking coffee and have a deep passion for technology. Currently, I am on a journey to learn about web and mobile development, but my biggest interest in technology is cybersecurity. I am dedicated to understanding the intricacies of protecting digital information and hope to contribute to the advancement of the technology world.</motion.p>
             </div>
 
-            <div ref={skillsRef} className='w-full min-h-fit flex flex-col items-center text-center px-5 xl:hidden'>
+            <div ref={skillsMobileRef} className='w-full min-h-fit flex flex-col items-center text-center px-5 xl:hidden'>
                 <h1 className='text-2xl text-primary font-bold'>My Current Skill By Far</h1>
                 <br />
                 <Marq icons={icons} />

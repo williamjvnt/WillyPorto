@@ -33,8 +33,8 @@ function Navbar({ scrollToSection }) {
                 <div id='navbarToggleExternalContent' className='mt-4 md:hidden'>
                     <ul className='flex flex-col space-y-3'>
                         <li className="text-third font-semibold hover:text-gold text-sm self-center cursor-pointer" onClick={() => scrollToSection.intro()}>HOME</li>
-                        <li className="text-third font-semibold hover:text-gold text-sm self-center cursor-pointer" onClick={() => scrollToSection.skills()}>ABOUT</li>
-                        <li className="text-third font-semibold hover:text-gold text-sm self-center cursor-pointer" onClick={() => scrollToSection.skills()}>SKILL</li>
+                        <li className="text-third font-semibold hover:text-gold text-sm self-center cursor-pointer" onClick={() => scrollToSection.about()}>ABOUT</li>
+                        <li className="text-third font-semibold hover:text-gold text-sm self-center cursor-pointer" onClick={() => scrollToSection.skillsMobile()}>SKILL</li>
                         <li className="text-third font-semibold hover:text-gold text-sm self-center cursor-pointer" onClick={() => scrollToSection.projects()}>PROJECT</li>
                     </ul>
                 </div>
