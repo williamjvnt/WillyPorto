@@ -58,7 +58,7 @@ const LandingPage = () => {
         ref.current?.scrollIntoView({ behavior: 'smooth' });
     };
     return (
-        <div className='relative w-full min-h-screen bg-third'>
+        <div className='relative w-full h-full bg-third'>
             <Navbar scrollToSection={{
                 intro: () => scrollToSection(introRef),
                 about: () => scrollToSection(aboutRef),
@@ -71,7 +71,7 @@ const LandingPage = () => {
                 <AbstractShapes src={
                     <svg 
                         className=' md:h-[30rem] md:w-[30rem] xl:h-[60rem] xl:w-[60rem] xl:ml-42'
-                        width={500} height={500} 
+                        width={"w-min-fit"} height={414} 
                         viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <clipPath id="blobclip">
@@ -79,7 +79,7 @@ const LandingPage = () => {
                             </clipPath>
                         </defs>
                         <motion.image
-
+                            
                             href={mySelf}
                             x="30" 
                             y="5"
@@ -92,13 +92,13 @@ const LandingPage = () => {
                     </svg>
                 }/>
                 <div className='flex flex-col items-center text-center align-middle relative md:left-[-50px] md:bottom-[-65px] xl:left-[0px]'>
-                    <motion.h1 ref={ref} className='text-3xl text-fourth font-bold relative bottom-[4rem] xl:text-6xl' 
+                    <motion.h1 ref={ref} className='text-3xl text-fourth font-bold relative bottom-[3rem] xl:text-6xl' 
                         initial={{ opacity: -10, y: -50 }} 
                         animate={{ opacity:isInView ? 1 : -10 ,y: isInView ? 0 : -50, }} 
                         transition={{ ease: "easeOut", duration: 0.2, }} >
                             Hi, i am <span className='text-primary'>William</span>
                         </motion.h1>
-                    <motion.h1 ref={ref} className='text-3xl text-fourth font-bold relative bottom-[4rem] xl:text-6xl'initial={{ opacity: -10, y: -50 }} animate={{ opacity:isInView ? 1 : -10 ,y: isInView ? 0 : -50,}} transition={{ ease: "easeOut", duration: 0.2,  }}>Cyber Security Enthusiast</motion.h1>
+                    <motion.h1 ref={ref} className='text-3xl text-fourth font-bold relative bottom-[3rem] xl:text-6xl'initial={{ opacity: -10, y: -50 }} animate={{ opacity:isInView ? 1 : -10 ,y: isInView ? 0 : -50,}} transition={{ ease: "easeOut", duration: 0.2,  }}>Cyber Security Enthusiast</motion.h1>
                     <motion.div className='col-span-3 relative bottom-[2rem] ' initial={{ opacity: -10, y: 100 }} animate={{opacity:isInView ? 1 : -10 ,y: isInView ? 0 : 100,}} transition={{ ease: "easeOut", duration: 0.5 }}>
                         <a href="https://www.linkedin.com/in/william-juvent-617509231/" className='text-4xl mx-4 xl:text-5xl' ><FontAwesomeIcon className='hover:text-fifth' icon={faLinkedin} /></a>
                         <a href="https://github.com/williamjvnt" className='text-4xl mx-4 xl:text-5xl'><FontAwesomeIcon className='hover:text-fifth' icon={faGithub}/></a>
@@ -118,7 +118,7 @@ const LandingPage = () => {
                     <svg 
                         
                         className=' md:h-[30rem] md:w-[30rem] md:ml-[-20px] xl:h-[60rem] xl:w-[60rem] xl:mr-[-20px]'
-                        width={500} height={500} 
+                        width={"w-min-fit"} height={414} 
                         viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <clipPath id="blobclip">
@@ -138,9 +138,9 @@ const LandingPage = () => {
                     </svg>
                 }/>
                 <motion.h1 
-                ref={refAboutMobile} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAboutMobile ? 1 : 0 ,x: isInAboutMobile ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2}} className='text-2xl text-fourth font-bold relative bottom-[4rem] md:hidden'>Hi My Name is William Juvent</motion.h1>
+                ref={refAboutMobile} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAboutMobile ? 1 : 0 ,x: isInAboutMobile ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2}} className='text-2xl text-fourth font-bold relative bottom-[3rem] md:hidden'>Hi My Name is William Juvent</motion.h1>
                 <br />
-                <motion.p ref={refAboutMobile} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAboutMobile ? 1 : 0 ,x: isInAboutMobile ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2, delay: 0.5 }} className=' text-fourth font-semi-bold relative bottom-[5rem] md:hidden'>I really love drinking coffee and have a deep passion for technology. Currently, I am on a journey to learn about web and mobile development, but my biggest interest in technology is cybersecurity. I am dedicated to understanding the intricacies of protecting digital information and hope to contribute to the advancement of the technology world.</motion.p>
+                <motion.p ref={refAboutMobile} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAboutMobile ? 1 : 0 ,x: isInAboutMobile ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2, delay: 0.5 }} className=' text-fourth font-semi-bold relative bottom-[4rem] md:hidden'>I really love drinking coffee and have a deep passion for technology. Currently, I am on a journey to learn about web and mobile development, but my biggest interest in technology is cybersecurity. I am dedicated to understanding the intricacies of protecting digital information and hope to contribute to the advancement of the technology world.</motion.p>
             </div>
 
             <div ref={skillsMobileRef} className='w-full min-h-fit flex flex-col items-center text-center px-5 xl:hidden'>

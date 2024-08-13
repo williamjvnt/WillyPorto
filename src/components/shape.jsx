@@ -15,7 +15,7 @@ function AbstractShapes({src}) {
                 duration: 1,
                 delay: 0.3
             }}
-        className="relative flex justify-center items-center">
+        className="relative w-fit flex justify-center items-center">
             {src}
         </motion.div>
     );
