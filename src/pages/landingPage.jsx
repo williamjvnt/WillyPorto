@@ -12,7 +12,7 @@ import ta from '../assets/ta.png';
 import bias from '../assets/bias.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faHtml5, faBootstrap, faCss3, faLaravel, faJs, faReact, faPython, faPhp , faAngular, } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faBootstrap, faCss3, faLaravel, faJs, faReact, faPython, faPhp , faAngular, faJava } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { useInView } from "framer-motion";
 
