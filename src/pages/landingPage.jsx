@@ -12,7 +12,7 @@ import ta from '../assets/ta.png';
 import bias from '../assets/bias.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faHtml5, faBootstrap, faCss3, faLaravel, faJs, faReact, faPython, faPhp } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faBootstrap, faCss3, faLaravel, faJs, faReact, faPython, faPhp , faAngular, } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { useInView } from "framer-motion";
 
@@ -21,13 +21,15 @@ const icons = [
     { name: 'Bootstrap', icon: faBootstrap },
     { name: 'CSS3', icon: faCss3 },
     { name: 'Laravel', icon: faLaravel },
+    { name: 'Angular', icon: faAngular },
 ];
 
 const icons2 = [
     { name: 'JavaScript', icon: faJs },
     { name: 'React', icon: faReact },
     { name: 'Python', icon: faPython },
-    { name: 'PHP', icon: faPhp }
+    { name: 'PHP', icon: faPhp },
+    { name: 'Java', icon: fajava }
 ];
 
 const icons3 = [
@@ -38,7 +40,9 @@ const icons3 = [
     { name: 'JavaScript', icon: faJs },
     { name: 'React', icon: faReact },
     { name: 'Python', icon: faPython },
-    { name: 'PHP', icon: faPhp }
+    { name: 'PHP', icon: faPhp },
+    { name: 'Angular', icon: faAngular },
+    { name: 'Java', icon: faJava }
 ];
 
 const LandingPage = () => {
