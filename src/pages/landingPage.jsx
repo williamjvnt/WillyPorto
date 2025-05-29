@@ -29,7 +29,7 @@ const icons2 = [
     { name: 'React', icon: faReact },
     { name: 'Python', icon: faPython },
     { name: 'PHP', icon: faPhp },
-    { name: 'Java', icon: fajava }
+    { name: 'Java', icon: faJava }
 ];
 
 const icons3 = [
