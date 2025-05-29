@@ -8,6 +8,8 @@ import mySelf from '../assets/IMG_8424.jpeg';
 import photo_2 from '../assets/IMG_8936.jpeg';
 import pelem from '../assets/pelem.jpg';
 import bakery from '../assets/bakery.jpg';
+import ta from '../assets/ta.png';
+import bias from '../assets/bias.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHtml5, faBootstrap, faCss3, faLaravel, faJs, faReact, faPython, faPhp } from '@fortawesome/free-brands-svg-icons';
@@ -180,9 +182,18 @@ const LandingPage = () => {
                         text='The Book that I wrote as a Assistent Lecture.'
                         
                     />
-                    <Card title={"Coming Soon"} 
-                        img="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
-                        text='Coming Soon Coming Soon Coming Soon Coming Soon Coming Soon'
+                    
+                    <Card title={"Speech Emotion Recognition"}
+                        
+                        img={ta}
+                        src={"https://tspmoiclfrfr.streamlit.app/"}
+                        text='The Project as a Final Project.'
+                        
+                    />
+                    <Card title={"My kpop bias"} 
+                        img={bias}
+                        src={"https://mybias.vercel.app/"}
+                        text='Project i make to learn Angular.'
                         
                     />
                 </div>

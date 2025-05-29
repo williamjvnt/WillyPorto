@@ -17,17 +17,17 @@ function Card ({src,text,img,title}) {
                 className="relative overflow-hidden bg-cover bg-no-repeat">
                 <img
                 
-                    className="rounded-t-lg w-[20rem] h-[18rem] object-cover" 
+                    className="rounded-t-lg w-[20rem] h-[18rem]  object-cover" 
                     src={img}
                     alt=""
                 />
             </div>
             <div className="p-6 bg-fourth rounded-lg">
                 <h5
-                    className="mb-2 text-xl font-medium leading-tight text-secondary dark:text-secondary">
+                    className="mb-4 text-xl font-medium leading-tight text-secondary dark:text-secondary">
                     {title}
                 </h5>
-                <p className="mb-4 text-base text-neutral-200">
+                <p className="mb-4 text-base text-neutral-200 h-[4rem]">
                     {text}
                 </p>
                 
