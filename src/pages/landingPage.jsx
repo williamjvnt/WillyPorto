@@ -176,7 +176,7 @@ const LandingPage = () => {
                     />
                     <Card title={"Atma Kitchen"} 
                         img={bakery} 
-                        src={'https://github.com/padukuhanPelem/website_pelem.git'}
+                        src={'https://github.com/williamjvnt/atma_kitchen.git'}
                         text="The static website I've made for my college project"
                         
                     />
