@@ -5,14 +5,15 @@ import Marq from '../components/marquee';
 import Card from '../components/card';
 import forensik from '../assets/forensik.jpg';
 import mySelf from '../assets/IMG_8424.jpeg';
-import photo_2 from '../assets/IMG_8936.jpeg';
+import photo_2 from '../assets/IMG_9498.jpeg';
 import pelem from '../assets/pelem.jpg';
 import bakery from '../assets/bakery.jpg';
 import ta from '../assets/ta.png';
 import bias from '../assets/bias.png';
+import flutter from '../assets/flutter.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faHtml5, faBootstrap, faCss3, faLaravel, faJs, faReact, faPython, faPhp , faAngular, faJava } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faBootstrap, faCss3, faLaravel, faJs, faReact, faPython, faPhp , faAngular, faJava, faFlutter } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { useInView } from "framer-motion";
 
@@ -29,7 +30,8 @@ const icons2 = [
     { name: 'React', icon: faReact },
     { name: 'Python', icon: faPython },
     { name: 'PHP', icon: faPhp },
-    { name: 'Java', icon: faJava }
+    { name: 'Java', icon: faJava },
+    { name: 'Flutter', icon: faFlutter},
 ];
 
 const icons3 = [
@@ -42,7 +44,8 @@ const icons3 = [
     { name: 'Python', icon: faPython },
     { name: 'PHP', icon: faPhp },
     { name: 'Angular', icon: faAngular },
-    { name: 'Java', icon: faJava }
+    { name: 'Java', icon: faJava },
+    { name: 'Flutter', icon: faFlutter},
 ];
 
 const LandingPage = () => {
@@ -134,7 +137,7 @@ const LandingPage = () => {
                         <motion.image
 
                             href={photo_2}
-                            x="2" 
+                            x="5" 
                             y="-5"
                             width="180" 
                             height="180"
@@ -197,7 +200,13 @@ const LandingPage = () => {
                     <Card title={"My kpop bias"} 
                         img={bias}
                         src={"https://mybias.vercel.app/"}
-                        text='Project i make to learn Angular.'
+                        text='Project i make to explore Angular.'
+                        
+                    />
+                    <Card title={"Movie Picker"} 
+                        img={flutter}
+                        src={"https://github.com/williamjvnt/flutter_movie.git"}
+                        text='Project i make to explore Flutter.'
                         
                     />
                 </div>
