@@ -120,7 +120,7 @@ const LandingPage = () => {
                 <div  className='flex-col items-center hidden relative md:flex md:right-[-40px] md:bottom-[-15px]'>
                     <motion.h1 ref={refAbout} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAbout ? 1 : 0 ,x: isInAbout ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2 }} className='text-2xl text-gray-800 font-bold xl:text-3xl'>Hi, my name is William Juvent</motion.h1>
                     <motion.i ref={refAbout} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAbout ? 1 : 0 ,x: isInAbout ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2, delay: 0.5 }} className='text-gray-600 font-semibold mt-4 xl:text-2xl'>
-                       I really love drinking coffee and have a deep passion for technology. Currently, I am on a journey to learn about web and mobile development, but my biggest interest in technology is cybersecurity. I am dedicated to understanding the intricacies of protecting digital information and hope to contribute to the advancement of the technology world.
+                       I really love drinking coffee and have a deep passion for technology. Currently, i'm a fresh graduate in Informatics with a strong passion for software development. Eager to grow as a software engineer by applying technical knowledge, problem-solving skills, and continuous learning to real-world projects.
                     </motion.i>
                 </div>
                 <AbstractShapes src={
@@ -149,7 +149,7 @@ const LandingPage = () => {
                 <motion.h1 
                 ref={refAboutMobile} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAboutMobile ? 1 : 0 ,x: isInAboutMobile ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2}} className='text-2xl text-fourth font-bold relative bottom-[3rem] md:hidden'>Hi My Name is William Juvent</motion.h1>
                 <br />
-                <motion.p ref={refAboutMobile} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAboutMobile ? 1 : 0 ,x: isInAboutMobile ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2, delay: 0.5 }} className=' text-fourth font-semi-bold relative bottom-[4rem] md:hidden'>I really love drinking coffee and have a deep passion for technology. Currently, I am on a journey to learn about web and mobile development, but my biggest interest in technology is cybersecurity. I am dedicated to understanding the intricacies of protecting digital information and hope to contribute to the advancement of the technology world.</motion.p>
+                <motion.p ref={refAboutMobile} initial={{ opacity: 0, x: -100 }} animate={{opacity: isInAboutMobile ? 1 : 0 ,x: isInAboutMobile ? 0:-100,}} transition={{ ease: "easeOut", duration: 0.2, delay: 0.5 }} className=' text-fourth font-semi-bold relative bottom-[4rem] md:hidden'>I really love drinking coffee and have a deep passion for technology. Currently, i'm a fresh graduate in Informatics with a strong passion for software development. Eager to grow as a software engineer by applying technical knowledge, problem-solving skills, and continuous learning to real-world projects.</motion.p>
             </div>
 
             <div ref={skillsMobileRef} className='w-full min-h-fit flex flex-col items-center text-center px-5 xl:hidden'>
