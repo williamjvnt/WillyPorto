@@ -111,7 +111,6 @@ const LandingPage = () => {
                     <motion.div className='col-span-3 relative bottom-[2rem] ' initial={{ opacity: -10, y: 100 }} animate={{opacity:isInView ? 1 : -10 ,y: isInView ? 0 : 100,}} transition={{ ease: "easeOut", duration: 0.5 }}>
                         <a href="https://www.linkedin.com/in/william-juvent-617509231/" className='text-4xl mx-4 xl:text-5xl' ><FontAwesomeIcon className='hover:text-fifth' icon={faLinkedin} /></a>
                         <a href="https://github.com/williamjvnt" className='text-4xl mx-4 xl:text-5xl'><FontAwesomeIcon className='hover:text-fifth' icon={faGithub}/></a>
-                        <a href='https://www.instagram.com/williamjvnt/' className='text-4xl mx-4 xl:text-5xl'><FontAwesomeIcon className='hover:text-fifth' icon={faInstagram} /></a>
                     </motion.div>
                 </div> 
             </div>
